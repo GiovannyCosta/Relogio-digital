@@ -1,0 +1,87 @@
+:root {
+  --font-family: "Space Mono", monospace;
+  /* --bg-gradient: linear-gradient(135deg, #e0eafc 0%, #065cd6 100%); */
+  --card-bg: rgba(255, 255, 255, 0.3);
+  --card-border: rgba(24, 24, 24, 0.4);
+  --card-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
+  --text-primary: #12523a;
+  --text-secondary: #121f07;
+  --text-accent: #121f07;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  /* background: var(--bg-gradient); */
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--card-bg);
+  width: 350px;
+  min-height: 400px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+  color: var(--text-primary);
+}
+
+/* --- Cabeçalho (Data) --- */
+.week-wrapper .day {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+/* --- Clima --- */
+.weather-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.weather-wrapper .img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: none;
+}
+
+/* --- Seção Principal (Hora e Saudação) --- */
+.section {
+  text-align: center;
+}
+
+.time-wrapper .time {
+  font-size: 3.5rem;
+  /* 72px */
+  font-weight: 700;
+  letter-spacing: -2px;
+  /* Cor de destaque clássica */
+  color: var(--text-accent);
+  text-shadow: none;
+  transition: color 0.5s ease;
+}
+
+.time-wrapper .greeting {
+  font-size: 1.125rem;
+  /* 18px */
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
