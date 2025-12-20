@@ -1,12 +1,12 @@
 :root {
   --font-family: "Space Mono", monospace;
-  /* --bg-gradient: linear-gradient(135deg, #e0eafc 0%, #065cd6 100%); */
   --card-bg: rgba(255, 255, 255, 0.3);
   --card-border: rgba(24, 24, 24, 0.4);
   --card-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
   --text-primary: #12523a;
   --text-secondary: #121f07;
   --text-accent: #121f07;
+  --text-glow: #050a0e;
 }
 
 * {
@@ -17,7 +17,6 @@
 
 body {
   font-family: var(--font-family);
-  /* background: var(--bg-gradient); */
   color: var(--text-primary);
   display: flex;
   justify-content: center;
@@ -68,14 +67,25 @@ body {
   text-align: center;
 }
 
+
+.time-wrapper .time .ampm {
+  color: var(--text-glow);
+  font-size: 1.5rem;
+  margin-left: -25px;
+  vertical-align: super;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 .time-wrapper .time {
+  white-space: nowrap;
   font-size: 3.5rem;
   /* 72px */
   font-weight: 700;
   letter-spacing: -2px;
-  /* Cor de destaque clássica */
   color: var(--text-accent);
   text-shadow: none;
+  text-align: center;
   transition: color 0.5s ease;
 }
 
