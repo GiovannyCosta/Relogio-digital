@@ -3,9 +3,10 @@ const dateEl = document.querySelector(".date");
 const timeEl = document.querySelector(".time");
 const greetingEl = document.querySelector(".greeting");
 const imgEl = document.querySelector("#img");
+const langDropdown = document.getElementById("lang-opt");
 
-// mude para en-US ou pt-br
-const langConfig = "en-US";
+// inicializa padrão PT-BR
+let langConfig = "" || "pt-br";
 const optionsDate = {
   day: "2-digit",
   month: "long",
@@ -16,6 +17,21 @@ const optionsTime = {
   minute: "2-digit",
   second: "2-digit",
 };
+
+// Evento de mudança de idioma
+langDropdown.addEventListener("change", (e) => {
+  // muda o idioma com o valor selecionado
+  changLangOpt(e.target.value);
+});
+
+function changLangOpt(newLang) {
+  const select = document.getElementById("lang-opt");
+  if (newLang) {
+    select.value = newLang;
+    langConfig = newLang;
+    update(); // Força a atualização visual imediata
+  }
+}
 
 function updateHours() {
   const now = new Date();
@@ -63,4 +79,5 @@ function update() {
 }
 
 update(); // executa imediatamente
+changLangOpt(langConfig);
 setInterval(update, 1000); // atualiza a cada segundo

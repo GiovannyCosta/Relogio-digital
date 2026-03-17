@@ -35,11 +35,26 @@ body {
   border-radius: 25px;
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-border);
-  transition: background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    box-shadow 0.5s ease,
+    color 0.5s ease;
   color: var(--text-primary);
 }
 
 /* --- Cabeçalho (Data) --- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0;
+}
+.week-wrapper .date {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
 .week-wrapper .day {
   font-size: 16px;
   font-weight: 700;
@@ -67,7 +82,6 @@ body {
   text-align: center;
 }
 
-
 .time-wrapper .time .ampm {
   color: var(--text-glow);
   font-size: 1.5rem;
@@ -94,4 +108,13 @@ body {
   /* 18px */
   color: var(--text-secondary);
   margin-top: 10px;
+}
+
+#lang-opt {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  cursor: pointer;
+  color: var(--text-primary);
 }
