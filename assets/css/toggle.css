@@ -1,0 +1,80 @@
+#toggle-theme {
+  display: none;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --container-bg: #ffffff;
+  --container-shadow: #e0e0e0;
+  --container-border: #dcdcdc;
+  --toggle-bg: ##f3f3f3;
+  --span-color: #505050;
+}
+
+.toggle-label + #toggle-theme:checked {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 20px;
+  background-color: var(--toggle-bg);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-label .icon {
+  transition:
+    opacity 0.5s ease,
+    transform 1s ease;
+  margin-bottom: 5px;
+}
+
+.icon-moon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.icon-sun {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+#toggle-theme:checked + .toggle-label .icon-moon {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+#toggle-theme:checked + .toggle-label .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+#toggle-theme + .toggle-label {
+  height: 40px;
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--span-color);
+  background-color: var(--toggle-bg);
+  font-size: 1.8rem;
+  position: relative;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --card-bg: rgba(44, 44, 44, 0.8);
+  --card-border: #70b77e;
+  --card-shadow: 5px 10px 15px #065143;
+  --text-primary: #70b77e;
+  --text-secondary: #e0e0e0;
+  --text-accent: #ffffff;
+  --toggle-bg: #2c2c2c;
+}

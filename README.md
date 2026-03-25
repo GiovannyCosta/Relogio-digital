@@ -12,6 +12,7 @@ Um relógio digital elegante que ajusta automaticamente a saudação (Bom dia, B
 - **Saudação e Interface Dinâmicas**: O texto e a imagem (sol, sol com nuvens ou lua) mudam automaticamente dependendo do período do dia (manhã, tarde ou noite).
 - **Internacionalização**: Fácil troca entre Português e Inglês, atualizando instantaneamente as datas, dias da semana e formatação (AM/PM para inglês).
 - **Design Responsivo e Moderno**: Interface limpa que se adapta a diferentes telas, estilizada com variáveis CSS (`:root`) e Flexbox para um alinhamento perfeito.
+- **Modo Escuro (Dark Mode):** Alternância de tema visual através de um interruptor (toggle) com persistência de dados no localStorage, garantindo que a preferência do utilizador seja mantida ao recarregar a página
 
 ## 🚀 Tecnologias
 

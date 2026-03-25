@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/ico/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/toggle.css">
     <title>Relógio Clássico</title>
 </head>
 
@@ -18,12 +19,21 @@
                 <p class="day"><!--Domingo--></p>
                 <p class="date"><!--22 de Outubro de 2023--></p>
             </div>
-            <div class="change-lang">
-                <select name="idiomas" id="lang-opt">
-                    <option value="" selected disabled>Idioma</option>
-                    <option value="pt-br">PT-BR</option>
-                    <option value="en-US">EN-US</option>
-                </select>
+            <div class="flex-wrapper">
+                <div class="change-lang">
+                    <select name="idiomas" id="lang-opt">
+                        <option value="" selected disabled>Idioma</option>
+                        <option value="pt-br">PT-BR</option>
+                        <option value="en-US">EN-US</option>
+                    </select>
+                </div>
+                <div class="toggle-wrapper">
+                    <input type="checkbox" id="toggle-theme">
+                    <label for="toggle-theme" class="toggle-label">
+                        <span class="icon icon-sun">☀️</span>
+                        <span class="icon icon-moon">🌙</span>
+                    </label>
+                </div>
             </div>
         </div>
 
@@ -42,6 +52,7 @@
     </div>
 
     <script src="./index.js"></script>
+    <script src="./toggle.js"></script>
 </body>
 
 </html>
