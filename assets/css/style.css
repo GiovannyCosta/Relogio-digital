@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  background-color: var(--card-bg);
+  background-color: var(--card-border);
   width: 350px;
   min-height: 400px;
   padding: 25px;
